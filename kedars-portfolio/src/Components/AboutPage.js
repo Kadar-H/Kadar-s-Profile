@@ -66,7 +66,7 @@ const AboutPage = () => {
         <PowerButton />
         <ParticleComponent theme="dark" />
         <DevBuddyContainer>
-          <img className="pic" src="https://i.imgur.com/hXjr2RB.jpg" alt="DevBuddy"></img>
+          <img className="pic" src="https://i.imgur.com/XIOqByw.png" alt="DevBuddy"></img>
         </DevBuddyContainer>
         <Main>
           Hello World, I'm a Frontend developer working remotely.
