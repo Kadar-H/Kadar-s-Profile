@@ -2,8 +2,8 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import GlobalStyle from "./globalStyles";
 import { LightTheme } from "./Theme";
-import { Route, Switch, useLocation } from "react-router";
 import { AnimatePresence } from "framer-motion";
+
 //Components
 import Main from "./Components/main";
 import AboutPage from "./Components/AboutPage";
@@ -12,21 +12,40 @@ import WorkPage from "./Components/WorkPage";
 import MySkillsPage from "./Components/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
 
+import { Routes, Route, useLocation } from "react-router-dom";
+
+
+
 function App() {
   const location = useLocation();
   return (
     <>
       <GlobalStyle />
+
       <ThemeProvider theme={LightTheme}>
         <SoundBar />
-        <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.pathname}>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/blog" component={BlogPage} />
-            <Route exact path="/work" component={WorkPage} />
-            <Route exact path="/skills" component={MySkillsPage} />
-          </Switch>
+
+        {/* For framer-motion animation on page change! */}
+        {/* Changed prop from exitBefore to mode */}
+        <AnimatePresence mode='wait'>
+          {/* Changed Switch to Routes */}
+
+          <Routes key={location.pathname} location={location} >
+            {/* Changed component to element */}
+
+            <Route path="/" element={<Main />} />
+
+            <Route path="/about" element={<AboutPage />} />
+
+            <Route path="/blog" element={<BlogPage />} />
+
+            <Route path="/work" element={<WorkPage />} />
+
+            <Route path="/skills" element={<MySkillsPage />} />
+            {/* Below is to catch all the other routes and send the user to main component,
+you can add custom 404 component or message instead of Main component*/}
+            <Route path="*" element={<Main />} />
+          </Routes>
         </AnimatePresence>
       </ThemeProvider>
     </>
@@ -34,3 +53,4 @@ function App() {
 }
 
 export default App;
+
