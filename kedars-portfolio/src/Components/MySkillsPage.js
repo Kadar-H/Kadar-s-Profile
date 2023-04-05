@@ -59,7 +59,7 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${(props) => props.theme.text};
-  font-size: calc(0.6em + 1vw);
+  font-size: calc(0.3em + 1vw);
   padding: 0.5rem 0;
 
   ${Main}:hover & {
@@ -85,9 +85,9 @@ const MySkillsPage = () => {
         <ParticleComponent theme="light" />
         <Main>
           <Title>
-            <Design width={40} height={40} /> Designer
+            <Design width={40} height={40} /> FRONTEND
           </Title>
-          <Description>I design using the latest tech applications</Description>
+          <Description>Interactive UI</Description>
           <Description>
             <strong>I Like to Design</strong>
             <ul>
@@ -95,28 +95,33 @@ const MySkillsPage = () => {
               <li>Mobile Apps</li>
             </ul>
           </Description>
-          <Description>
+          <Description style={{fontSize:"1"}}>
             <strong>Tools</strong>
             <ul>
               <li>Figma</li>
+              <li>WordPress</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Styled-Components</li>
+              <li>Tailwind</li>
+              <li>React</li>
             </ul>
           </Description>
         </Main>
         <Main>
           <Title>
-            <Develope width={40} height={40} /> Frontend Developer
+            <Develope width={40} height={40} /> Backend
           </Title>
           <Description>I design using the latest tech applications</Description>
           <Description>
             <strong>Skills</strong>
             <p>
-              React, HTML, CSS, JavaScript, Redux, MongoDB, C++, NodeJs,
-              Styled-Components, ect.
+              Postgres, Postman, Maven, NodeJS, SpringBoot, MongoDB, SQL, ect.
             </p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p> VScode, Github, VisualStudio 2019 etc.</p>
+            <p> VScode, Github, Eclipse, etc.</p>
           </Description>
         </Main>
         <BackgroundTitle text="SKILLS" top="80%" right="30%" />

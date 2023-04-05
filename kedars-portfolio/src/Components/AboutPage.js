@@ -69,15 +69,14 @@ const AboutPage = () => {
           <img className="pic" src="https://i.imgur.com/XIOqByw.png" alt="DevBuddy"></img>
         </DevBuddyContainer>
         <Main>
-          Hello World, I'm a Frontend developer working remotely.
+          Hello World, I'm a Jr.FullStack developer working remotely.
           <br /> <br />
           Effectively putting my skills to the test to bring you great web
-          designs.
+          designs & solutions.
           <br /> <br />I have a vast interest in Tech & like to learn new things
-          about Web Apps, BlockChain, CryptoCurrency ect.
+          about Web Apps, Security, BlockChain, CryptoCurrency ect.
           <br /> <br />
-          As a team player or independent DEV I Create. Click the power button,
-          then click Contact me to say Hi.
+          As a team player or independent DEV I Create. Clicke email me to get in touch.
         </Main>
         <BackgroundTitle text="ABOUT" top="10%" left="5%" />
       </Box>

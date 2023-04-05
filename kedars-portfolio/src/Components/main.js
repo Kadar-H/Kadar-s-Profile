@@ -4,9 +4,9 @@ import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { CodeBall, World } from "./AllSvgs";
 import Intro from "./Intro";
 import { motion } from "framer-motion";
+import { World } from "./AllSvgs";
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -140,6 +140,8 @@ const LableText = styled.text`
   margin-left: 0;
 `;
 
+
+
 const Main = () => {
   const [click, setClick] = useState(false);
 
@@ -162,12 +164,6 @@ const Main = () => {
           />
           <br></br>
           <br></br>
-
-          {/* <CodeBall
-            onClick={() => handleClick()}
-            fill="currentColor"
-            style={{ width: "10em", height: "10em" }}
-          /> */}
         </Center>
         <Contact
           target="_blank"
@@ -185,7 +181,7 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Contact...
+            <a  style={{ color: "black" }} href="mailto:kedar.h.dev@gmil.com">Email...</a>
           </motion.h2>
         </Contact>
         <Blog to="/blog" click={+click} style={{ marginLeft: 5 }}>
